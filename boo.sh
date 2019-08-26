@@ -35,7 +35,7 @@ echo "===================================================="
 echo -e $MESSAGE
 echo "===================================================="
 
-git push origin --tags --quiet
+git push origin $CUR_BRANCH --tags --quiet
 exit_test
 
 echo "======"
