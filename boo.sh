@@ -12,6 +12,11 @@ REPO_URL="git@github.com:overwatchftw/boo.git"
 CUR_DATE=`date +%F-%H-%M-%S`
 CUR_BRANCH=`git rev-parse --abbrev-ref HEAD`
 
+if [ "$CUR_BRANCH" != "master" ]
+  then
+    CUR_DATE=$CUR_BRANCH-$CUR_DATE
+fi
+
 MESSAGE="Pushing new tag: $CUR_DATE"
 
 git tag -a $CUR_DATE -m "Adding new timestamp tag"
