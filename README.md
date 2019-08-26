@@ -6,10 +6,13 @@ Clone the repo locally
 CD to the cloned repo
 > cd boo
 
+Update the remote origin URL
+> git remote set-url origin git+ssh://git@github.com/overwatchftw/boo.git
+
 Configure git to use the private key included with the repo
 > git config core.sshCommand 'ssh -i boo'
 
-
+** Since the user is unknown, we use a deploy key, included in the repo itself. Not secure, but will do the job. **
 
 
 **2. Requirements**
